@@ -1,0 +1,100 @@
+:root {
+  --main-white: #e9e9e9;
+  --main-lighestgrey: #acacac;
+  --main-hovergrey: #474747;
+  --main-lightgrey: #2e2e2e;
+  --main-gray: #272727;
+  --main-darkestgrey: #212121;
+  --main-black: #121212;
+  --main-darkestlavander: #18161b;
+  --main-nightlavander: #232129;
+  --main-darklavander: #bd7ffc;
+  --main-mutedlavander: #5b466f;
+  --main-lavander: #bb86fc;
+  --main-welcomelavander: #ad83df;
+  --main-lightlavander: #c495fd;
+  --main-mutedmint: #164f49;
+  --main-mint: #02dac5;
+  --blur: 0px;
+  --spacing: 1px;
+  --base: #c495fd;
+}
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  height: 65vh;
+}
+
+body {
+  background: var(--main-darkestlavander);
+  color: burlywood;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: var(--main-lavander);
+  font-size: 2em;
+  background: -webkit-linear-gradient(left,var(--main-lightlavander),orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.controls {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: -1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 3em;
+}
+
+input {
+  width: 6em;
+}
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: var(--main-lavander);
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+input[type="color"] {
+	-webkit-appearance: none;
+	width: 50px;
+  height: 10px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
