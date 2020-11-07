@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: #6b0f9c;
+  color: #000;
+  text-align: center;
+  align-items: center;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {
+  background: url(https://instagram.faep5-1.fna.fbcdn.net/v/t51.2885-15/fr/e15/p1080x1080/118702695_343970296732882_4145888632979851447_n.jpg?_nc_ht=instagram.faep5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=fqG3UmjbNtMAX-qbd0G&oh=dc4a804b38a54307e79eba83dc5d7bf3&oe=5FC4CE08);
+  background-position: center;
+  background-size: cover;
+}
+
+.panel2 {
+  background: url(https://instagram.faep5-1.fna.fbcdn.net/v/t51.2885-15/e35/25010463_195656324316232_826960562314280960_n.jpg?_nc_ht=instagram.faep5-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=CWD1O0-IlzYAX8mtgjt&tp=18&oh=6fc40252cb52d12a2eb6de69ea464845&oe=5FC5D73A);
+  background-position: center;
+  background-size: cover;
+}
+
+.panel3 {
+  background: url(https://instagram.faep5-1.fna.fbcdn.net/v/t51.2885-15/e35/21227006_114314029247278_5941280650567876608_n.jpg?_nc_ht=instagram.faep5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=HrkqpaBLnm0AX-IuMiv&tp=18&oh=1c264f14cb7de7b0dfd6c8f7ac0967ef&oe=5FC69B67);
+  background-position: center;
+  background-size: cover;
+}
+
+.panel4 {
+  background: url(https://instagram.faep5-1.fna.fbcdn.net/v/t51.2885-15/e35/81750523_936578533405485_1914150190025396972_n.jpg?_nc_ht=instagram.faep5-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=TTzk-1TUa6oAX-kARo5&tp=18&oh=e8b553908de1c3c5403299974b9ec23c&oe=5FC7F359);
+  background-position: center;
+  background-size: cover;
+}
+
+.panel5 {
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fa24ee85-6c28-4900-a860-6a7e728d9ef7/d9nt623-e4bf2c78-1e00-4268-88d1-f2749dbddae9.jpg/v1/fill/w_900,h_885,q_75,strp/portrait_by_evadnemeraki_d9nt623-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD04ODUiLCJwYXRoIjoiXC9mXC9mYTI0ZWU4NS02YzI4LTQ5MDAtYTg2MC02YTdlNzI4ZDllZjdcL2Q5bnQ2MjMtZTRiZjJjNzgtMWUwMC00MjY4LTg4ZDEtZjI3NDlkYmRkYWU5LmpwZyIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.gIr5-FB0LFw6OaH-g1qpQF8-ZVHwPoxOYody5_6trCI);
+  background-position: center;
+  background-size: cover;
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel p {
+  font-size: 0.8em;
+  opacity: 0.3;
+}
+
+.panel p:nth-child(2) {
+  font-size: 2.5em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
